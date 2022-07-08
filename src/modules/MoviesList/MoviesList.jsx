@@ -1,0 +1,1 @@
+import s from './movies-list.module.css';
