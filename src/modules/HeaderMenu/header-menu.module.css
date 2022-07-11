@@ -2,13 +2,16 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .item {
     display: inline-block;
+
     text-decoration: none;
     color: brown;
-    padding: 10px 15px;
+    padding: 20px 40px;
     border: 1px solid turquoise;
 }
 

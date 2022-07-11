@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <main>
             <div className={s.container}>
-                <h2>Trending today</h2>
+                <h2 className={s.title}>Trending today</h2>
                 <MoviesList />
             </div>
         </main>

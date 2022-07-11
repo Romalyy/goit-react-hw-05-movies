@@ -1,4 +1,5 @@
-import { useState} from "react";
+import { useState } from "react";
+import s from './movies-search-form.module.css';
 
 const MoviesSearchForm = ({onSubmit}) => {
     const [ state, setState ] = useState({
@@ -22,15 +23,16 @@ const MoviesSearchForm = ({onSubmit}) => {
     const { search } = state;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={s.form} onSubmit={handleSubmit}>
             <input
+                className={s.input}
                 name="search"
                 value={search}
                 onChange={handleChange}
                 type="text"
                 placeholder="Search movies"
                 required/>
-            <button type="submit">Search</button>
+            <button className={s.button} type="submit">Search</button>
         </form>
     )
 }

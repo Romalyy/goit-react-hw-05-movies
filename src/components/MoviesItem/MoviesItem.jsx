@@ -28,15 +28,13 @@ const MoviesItem = ({ item }) => {
             <div >
                 <h2>{`${title} (${releaseDate})`}</h2>
             <p>
-              USER SCORE:
-              <b>{vote_average * 10}%</b>
+              USER SCORE: <span className={s.text}>{vote_average * 10}%</span>
             </p>
             <p>
-              OVERVIEW:
-              <b>{overview}</b>
+              OVERVIEW: <span className={s.text}>{overview}</span>
             </p>
             <p>GENRES:</p>
-            <ul>
+            <ul className={s.list}>
                 {genresItem}
             </ul>
             </div>

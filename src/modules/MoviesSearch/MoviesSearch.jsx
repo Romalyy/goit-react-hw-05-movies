@@ -3,6 +3,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import MoviesSearchForm from './MoviesSearchForm';
 import { searchMovies } from "shared/api/movies";
+import s from './movies-search.module.css';
+
 
 const MoviesSearch = () => {
 
@@ -42,8 +44,8 @@ const [state, setState] = useState({
     const changeSearch = ({ search }) => setSearchParams({search});
     const { items, error, loading } = state;
 
-      const elements = items.map(({ id, title }) => title !== undefined && <li key={id}>
-         <Link to={`/movies/${id}`}>{ title }</Link>
+      const elements = items.map(({ id, title }) => title !== undefined && <li className={s.item} key={id}>
+         <Link className={s.link} to={`/movies/${id}`}>{ title }</Link>
     </li>)
   
   return (
@@ -51,7 +53,7 @@ const [state, setState] = useState({
       <MoviesSearchForm onSubmit={changeSearch} />
       {loading && <p>...Loading</p>}
       {error && <p>Movies not found</p>}
-      {items.length > 0 && <ul>{elements}</ul>}
+      {items.length > 0 && <ul className={s.list}>{elements}</ul>}
     </>
   );
 }

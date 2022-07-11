@@ -3,6 +3,7 @@ import { useParams, useNavigate, NavLink, Outlet } from "react-router-dom";
 import MoviesItem from '../../components/MoviesItem';
 
 import { getMovieById } from '../../shared/api/movies';
+import s from './single-movie-page.module.css';
 
 const SingleMoviePage = () => {
     
@@ -44,18 +45,21 @@ const SingleMoviePage = () => {
         
     }, [id]);
 
+    const getActiveLink = ({isActive}) => {
+    return isActive ? s.itemActive : s.item;
+}
 
     const goBack = () => navigate(-1);
     const isMovie = Object.keys(movie).length > 0;
     return (
         <main>
-            <div>
+            <div className={s.container}>
                 {loading && <p>...Loading</p>}
                 {error && <p>Movie not found</p>}
-                {isMovie && <button onClick={goBack}>Go back</button>}
+                {isMovie && <button className={s.button} onClick={goBack}>Go back</button>}
                 {movie?.id && <MoviesItem item={movie} />}
-                {isMovie && <NavLink to={`cast`}>Cast</NavLink>}
-                {isMovie && <NavLink to={`reviews`}>Reviews</NavLink>}
+                {isMovie && <NavLink className={getActiveLink} to={`cast`}>Cast</NavLink>}
+                {isMovie && <NavLink className={getActiveLink} to={`reviews`}>Reviews</NavLink>}
                 <Outlet />
             </div>
         </main>

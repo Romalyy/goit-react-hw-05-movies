@@ -36,16 +36,16 @@ const MoviesList = () => {
     }, []);
 
     const { items, loading, error } = state;
-    const elements = items.map(({ id, title }) => title !== undefined && <li key={id}>
-        <Link to={`/movies/${id}`}>{ title }</Link>
+    const elements = items.map(({ id, title }) => title !== undefined && <li className={s.item} key={id}>
+        <Link className={s.link} to={`/movies/${id}`}>{ title }</Link>
     </li> )
 
     return (
-        <>
+        <div className={s.container}>
             {loading && <p>...Loading</p>}
             {error && <p>Movies not found</p>}
             <ul className={s.list}>{elements}</ul>
-        </>
+        </div>
     )
 }
 
