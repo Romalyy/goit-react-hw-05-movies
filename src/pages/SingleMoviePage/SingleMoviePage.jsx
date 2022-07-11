@@ -12,6 +12,8 @@ const SingleMoviePage = () => {
         error: null,
     });
 
+    const { movie, loading, error } = state;
+
     const { id } = useParams();
     const navigate = useNavigate()
 
@@ -41,11 +43,10 @@ const SingleMoviePage = () => {
       fetchMovies()
     }
         
-    }, [id]);
+    }, [id, movie]);
 
 
     const goBack = () => navigate(-1);
-    const { movie, loading, error } = state;
     const isMovie = Object.keys(movie).length > 0;
     return (
         <main>
