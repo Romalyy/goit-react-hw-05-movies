@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.f0e6158d.js",
-    "static/css/830.b35764d5.chunk.css": "/goit-react-hw-05-movies/static/css/830.b35764d5.chunk.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.d70bc999.js",
+    "static/css/830.3df0aa8c.chunk.css": "/goit-react-hw-05-movies/static/css/830.3df0aa8c.chunk.css",
     "static/js/830.63c37af1.chunk.js": "/goit-react-hw-05-movies/static/js/830.63c37af1.chunk.js",
-    "static/css/736.31d6cfe0.chunk.css": "/goit-react-hw-05-movies/static/css/736.31d6cfe0.chunk.css",
-    "static/js/736.ec4c6c93.chunk.js": "/goit-react-hw-05-movies/static/js/736.ec4c6c93.chunk.js",
-    "static/js/726.d584cb05.chunk.js": "/goit-react-hw-05-movies/static/js/726.d584cb05.chunk.js",
-    "static/css/619.c58ad4b8.chunk.css": "/goit-react-hw-05-movies/static/css/619.c58ad4b8.chunk.css",
-    "static/js/619.4f30eb7a.chunk.js": "/goit-react-hw-05-movies/static/js/619.4f30eb7a.chunk.js",
+    "static/css/736.8149d2f4.chunk.css": "/goit-react-hw-05-movies/static/css/736.8149d2f4.chunk.css",
+    "static/js/736.196a3fcd.chunk.js": "/goit-react-hw-05-movies/static/js/736.196a3fcd.chunk.js",
+    "static/css/255.6dc9f233.chunk.css": "/goit-react-hw-05-movies/static/css/255.6dc9f233.chunk.css",
+    "static/js/255.129c4687.chunk.js": "/goit-react-hw-05-movies/static/js/255.129c4687.chunk.js",
+    "static/css/402.fb4ee74c.chunk.css": "/goit-react-hw-05-movies/static/css/402.fb4ee74c.chunk.css",
+    "static/js/402.0eac21d7.chunk.js": "/goit-react-hw-05-movies/static/js/402.0eac21d7.chunk.js",
     "static/js/673.61054fc0.chunk.js": "/goit-react-hw-05-movies/static/js/673.61054fc0.chunk.js",
     "static/js/317.9a3058e6.chunk.js": "/goit-react-hw-05-movies/static/js/317.9a3058e6.chunk.js",
     "static/js/93.05c32612.chunk.js": "/goit-react-hw-05-movies/static/js/93.05c32612.chunk.js",
@@ -16,13 +17,15 @@
     "static/media/img.png": "/goit-react-hw-05-movies/static/media/img.baba1a7394e8054d69cf.png",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.f0e6158d.js.map": "/goit-react-hw-05-movies/static/js/main.f0e6158d.js.map",
-    "830.b35764d5.chunk.css.map": "/goit-react-hw-05-movies/static/css/830.b35764d5.chunk.css.map",
+    "main.d70bc999.js.map": "/goit-react-hw-05-movies/static/js/main.d70bc999.js.map",
+    "830.3df0aa8c.chunk.css.map": "/goit-react-hw-05-movies/static/css/830.3df0aa8c.chunk.css.map",
     "830.63c37af1.chunk.js.map": "/goit-react-hw-05-movies/static/js/830.63c37af1.chunk.js.map",
-    "736.ec4c6c93.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.ec4c6c93.chunk.js.map",
-    "726.d584cb05.chunk.js.map": "/goit-react-hw-05-movies/static/js/726.d584cb05.chunk.js.map",
-    "619.c58ad4b8.chunk.css.map": "/goit-react-hw-05-movies/static/css/619.c58ad4b8.chunk.css.map",
-    "619.4f30eb7a.chunk.js.map": "/goit-react-hw-05-movies/static/js/619.4f30eb7a.chunk.js.map",
+    "736.8149d2f4.chunk.css.map": "/goit-react-hw-05-movies/static/css/736.8149d2f4.chunk.css.map",
+    "736.196a3fcd.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.196a3fcd.chunk.js.map",
+    "255.6dc9f233.chunk.css.map": "/goit-react-hw-05-movies/static/css/255.6dc9f233.chunk.css.map",
+    "255.129c4687.chunk.js.map": "/goit-react-hw-05-movies/static/js/255.129c4687.chunk.js.map",
+    "402.fb4ee74c.chunk.css.map": "/goit-react-hw-05-movies/static/css/402.fb4ee74c.chunk.css.map",
+    "402.0eac21d7.chunk.js.map": "/goit-react-hw-05-movies/static/js/402.0eac21d7.chunk.js.map",
     "673.61054fc0.chunk.js.map": "/goit-react-hw-05-movies/static/js/673.61054fc0.chunk.js.map",
     "317.9a3058e6.chunk.js.map": "/goit-react-hw-05-movies/static/js/317.9a3058e6.chunk.js.map",
     "93.05c32612.chunk.js.map": "/goit-react-hw-05-movies/static/js/93.05c32612.chunk.js.map",
@@ -30,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.f0e6158d.js"
+    "static/js/main.d70bc999.js"
   ]
 }
