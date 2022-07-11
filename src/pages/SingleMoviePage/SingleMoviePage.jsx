@@ -32,7 +32,6 @@ const SingleMoviePage = () => {
             } catch (error) {
                 setState(prevState => ({
                     ...prevState,
-                    movie: {...movie},
                     loading: false,
                     error,
                 
@@ -43,7 +42,7 @@ const SingleMoviePage = () => {
       fetchMovies()
     }
         
-    }, [id, movie]);
+    }, [id]);
 
 
     const goBack = () => navigate(-1);
