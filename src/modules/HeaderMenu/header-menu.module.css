@@ -19,4 +19,5 @@
     composes: item;
     color: white;
     background-color: red;
+    border: none;
 }

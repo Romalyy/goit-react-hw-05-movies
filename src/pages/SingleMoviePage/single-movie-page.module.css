@@ -32,11 +32,12 @@
 }
 
 .item:not(:last-child) {
-    margin-right: 110px;
+    margin-left: 35px;
 }
 
 .itemActive {
     composes: item;
     color: white;
     background-color: red;
+    border: none;
 }
