@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    display: inline-block;
+    text-decoration: none;
+    color: brown;
+    padding: 10px 15px;
+    border: 1px solid turquoise;
+}
+
+.itemActive {
+    composes: item;
+    color: white;
+    background-color: red;
+}
