@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, NavLink, Outlet } from "react-router-dom";
+import { useParams, useNavigate, NavLink, Outlet, useLocation } from "react-router-dom";
 import MoviesItem from '../../components/MoviesItem';
 
 import { getMovieById } from '../../shared/api/movies';
@@ -17,6 +17,9 @@ const SingleMoviePage = () => {
 
     const { id } = useParams();
     const navigate = useNavigate()
+    const location = useLocation();
+    const from = location.state?.from ?? "/";
+    const goBack = () => navigate(from);
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -49,7 +52,7 @@ const SingleMoviePage = () => {
     return isActive ? s.itemActive : s.item;
 }
 
-    const goBack = () => navigate(-1);
+    
     const isMovie = Object.keys(movie).length > 0;
     return (
         <main>
