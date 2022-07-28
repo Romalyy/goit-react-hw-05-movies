@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import PropTypes from "prop-types";
 import  {getTrendingMovies} from '../../shared/api/movies'
 import s from './movies-list.module.css';
@@ -10,7 +10,7 @@ const MoviesList = () => {
         loading: false,
         error: null,
     });
-
+const from = useLocation();
     useEffect(() => {
         const fetchMovies = async () => {
             setState(prevState => ({
@@ -37,7 +37,7 @@ const MoviesList = () => {
 
     const { items, loading, error } = state;
     const elements = items.map(({ id, title }) => title !== undefined && <li className={s.item} key={id}>
-        <Link className={s.link} to={`/movies/${id}`}>{ title }</Link>
+        <Link className={s.link} to={`/movies/${id}`} state={{ from }}>{ title }</Link>
     </li> )
 
     return (

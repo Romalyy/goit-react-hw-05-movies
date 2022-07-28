@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, NavLink, Outlet, useLocation } from "react-router-dom";
+import { useParams, useNavigate, NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import MoviesItem from '../../components/MoviesItem';
 
 import { getMovieById } from '../../shared/api/movies';
@@ -15,11 +15,14 @@ const SingleMoviePage = () => {
 
     const { movie, loading, error } = state;
 
-    const { id } = useParams();
-    const navigate = useNavigate()
+    // const { id } = useParams();
+    const { id: StrId } = useParams();
+  const id = Number(StrId);
+    // const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from ?? "/";
-    const goBack = () => navigate(from);
+    // const from = location.state?.from || "/";
+    // const goBack = () => navigate(from);
+     const goBack = location?.state?.from ?? '/';
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -29,9 +32,9 @@ const SingleMoviePage = () => {
             }))
 
             try {
-                const movie = await getMovieById(id);
+                const movieEl = await getMovieById(id);
                 setState((prevState) => {
-          return { ...prevState, loading: false, movie: { ...movie } };
+          return { ...prevState, loading: false, movie: { ...movieEl } };
         });
             } catch (error) {
                 setState(prevState => ({
@@ -55,17 +58,22 @@ const SingleMoviePage = () => {
     
     const isMovie = Object.keys(movie).length > 0;
     return (
-        <main>
+        <>
             <div className={s.container}>
+                {/* <button className={s.button} type="button" onClick={goBack}>Go back</button> */}
+                <Link className={s.button} to={goBack}>
+                    Go back
+                </Link>
+            
                 {loading && <p>...Loading</p>}
                 {error && <p>Movie not found</p>}
-                {isMovie && <button className={s.button} onClick={goBack}>Go back</button>}
-                {movie?.id && <MoviesItem item={movie} />}
-                {isMovie && <NavLink className={getActiveLink} to={`cast`}>Cast</NavLink>}
-                {isMovie && <NavLink className={getActiveLink} to={`reviews`}>Reviews</NavLink>}
-                <Outlet />
+                {isMovie && <MoviesItem item={movie} />}
+                {isMovie && <NavLink className={getActiveLink} to={`cast`} state={{ from: goBack }}>Cast</NavLink>}
+                {isMovie && <NavLink className={getActiveLink} to={`reviews`} state={{ from: goBack }}>Reviews</NavLink>}
+                
             </div>
-        </main>
+            <Outlet />
+        </>
     );
 }
 
